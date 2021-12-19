@@ -10,13 +10,14 @@ def file_to_list(file_path):
 
 def count_increase(input):
     count = 0
-    i, j = 0, 1
+    i = 0
     
-    while j < len(input):
-        if input[j] > input[i]:
+    while i + 3 < len(input):
+        m1 = input[i] + input[i + 1] + input[i + 2]
+        m2 = m1 - input[i] + input[i + 3]
+        if m2 > m1:
             count += 1
         i += 1
-        j += 1
     
     return count
 
