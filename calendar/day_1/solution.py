@@ -1,4 +1,3 @@
-from pathlib import Path
 from ..utils import file_to_list
 
 def count_increase(input):
@@ -14,5 +13,4 @@ def count_increase(input):
     return count
 
 def run():
-    path = Path("calendar/day_1/input").absolute()
-    return count_increase(file_to_list(path))
+    return count_increase(file_to_list("calendar/day_1/input"))
