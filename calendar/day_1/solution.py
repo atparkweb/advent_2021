@@ -1,4 +1,12 @@
-from ..utils import file_to_list
+def file_to_list(file_path):
+    result = []
+    f = open(file_path, "r")
+    lines = f.readlines()
+    
+    for line in lines:
+       result.append(int(line)) 
+       
+    return result
 
 def count_increase(input):
     count = 0

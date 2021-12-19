@@ -1,1 +1,1 @@
-from calendar.day_1.solution import run
+from calendar.day_2.solution import run
