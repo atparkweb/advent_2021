@@ -10,6 +10,7 @@ def file_to_list(file_path):
    return result
 
 def run():
+   aim = 0;
    h = 0;
    v = 0;
 
@@ -17,11 +18,12 @@ def run():
    for [direction, n] in lines:
       if direction == "forward":
          h += n
+         v += aim * n
       elif direction == "up":
-         v -= n
+         aim -= n
       elif direction == "down":
-         v += n
+         aim += n
       else:
          raise "Not a valid direction"
    
-   return [h, v]
+   return h * v
